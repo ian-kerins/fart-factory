@@ -1,1 +1,3 @@
- 
+Flask
+Frozen-Flask
+# Add other dependencies your app needs 
