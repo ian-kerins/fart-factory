@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ragnar Alnes</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .fart-button {
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+            border-radius: 12px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div style="font-size: 3em;">💨 🌈</div>
+        <h1>Ragnar Alnes Fart Factory</h1>
+        <h2 style="font-weight: normal;">The founder and creator of the world's smelliest farts!</h2>
+        <h3>Ragnars Greatest Hits:</h3>
+        <button onclick="playFartSound('fart-1')" class="fart-button">The Quicky! 💨</button>
+        <audio id="fart-1" src="/static/fart-1.mp3" preload="auto"></audio>
+        <button onclick="playFartSound('wet-fart')" class="fart-button">The Wetty! 💦</button>
+        <audio id="wet-fart" src="/static/wet-fart.mp3" preload="auto"></audio>
+        <button onclick="playFartSound('fart-9')" class="fart-button">The Violent! 💥</button>
+        <audio id="fart-9" src="/static/fart-9.mp3" preload="auto"></audio>
+    </div>
+    <script>
+        function playFartSound(tag) {
+            var sound = document.getElementById(tag);
+            sound.play().catch(function(error) {
+                console.log("Error playing sound:", error);
+            });
+        }
+    </script>
+</body>
+</html>
